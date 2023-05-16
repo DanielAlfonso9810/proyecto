@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Tarjetas</title>
+</head>
+<body>
+<h1>Tarjetas</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>PAN Enmascarado</th>
+        <th>Titular</th>
+        <th>Cédula</th>
+        <th>Teléfono</th>
+        <th>Estado</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="tarjeta : ${tarjetas}">
+        <td th:text="${tarjeta.id}"></td>
+        <td th:text="${tarjeta.panEnmascarado}"></td>
+        <td th:text="${tarjeta.titular}"></td>
+        <td th:text="${tarjeta.cedula}"></td>
+        <td th:text="${tarjeta.telefono}"></td>
+        <td th:text="${tarjeta.estado}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>

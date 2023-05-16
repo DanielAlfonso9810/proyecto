@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar transacciones</title>
+</head>
+<body>
+<h1>Transacciones</h1>
+<table>
+    <thead>
+    <tr>
+        <th>id</th>
+        <th>Pan</th>
+        <th>Referencia</th>
+        <th>Total compra</th>
+        <th>Dirección de compra</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="transaccion : ${transacciones}">
+        <td th:text="${transaccion.id}"></td>
+        <td th:text="${transaccion.pan}"></td>
+        <td th:text="${transaccion.referencia}"></td>
+        <td th:text="${transaccion.totalCompra}"></td>
+        <td th:text="${transaccion.direccion}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
